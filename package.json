@@ -1,0 +1,11 @@
+{
+  "name": "link-appender",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "fulcanelly <dallasxfulcanelly@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "telegraf": "^4.16.3"
+  }
+}
