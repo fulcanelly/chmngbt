@@ -1,3 +1,11 @@
+
+// link appedner bot
+// todo
+// * docker compose (1 service)
+// * docker file
+// * take link from env variable
+
+
 const { Telegraf } = require('telegraf')
 const { channelPost } = require('telegraf/filters')
 
@@ -10,12 +18,8 @@ const bot = new Telegraf(process.env.BOT_TOKEN)
 
 
 bot.on(channelPost(), async ctx => {
-  // console.log('loh')
-  console.log({
-    from: ctx.from,
-    text: ctx.text,
-    caption: ctx.update.channel_post.caption
-  })
+
+  const link = '' // тут хз, 
 
   if (ctx.update.channel_post.forward_origin) {
     return
@@ -24,11 +28,11 @@ bot.on(channelPost(), async ctx => {
   let caption = ctx.update.channel_post.caption
 
   if (caption) {
-    return await ctx.editMessageCaption(caption + ' af')
+    return await ctx.editMessageCaption(caption + link)
   }
 
   if (ctx.text) {
-    return await ctx.editMessageText(ctx.text + ' af')
+    return await ctx.editMessageText(ctx.text + link)
   }
 
 })
