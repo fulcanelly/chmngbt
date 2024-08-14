@@ -1,0 +1,3 @@
+yarn
+
+node main.js
