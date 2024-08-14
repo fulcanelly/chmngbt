@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nodejs:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      BOT_TOKEN: ${BOT_TOKEN}
+      LINK: ${LINK}
+      LINK_TEXT: ${LINK_TEXT}
+
+
